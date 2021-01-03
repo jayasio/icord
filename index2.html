@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Mukta&display=swap" rel="stylesheet">
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+    <style>
+        body {
+            font-family: 'Mukta', sans-serif;
+            padding: 10px;
+        }
+
+        /* ----START:STYLE FOR TABS----*/
+        /* Style the tab */
+        .tab {
+            overflow: hidden;
+            border: 1px solid #ccc;
+            background-color: #f1f1f1;
+        }
+
+        /* Style the buttons inside the tab */
+        .tab button {
+            background-color: inherit;
+            float: left;
+            border: none;
+            outline: none;
+            cursor: pointer;
+            padding: 14px 16px;
+            transition: 0.3s;
+            font-size: 17px;
+        }
+
+        /* Change background color of buttons on hover */
+        .tab button:hover {
+            background-color: #ddd;
+        }
+
+        /* Create an active/current tablink class */
+        .tab button.active {
+            background-color: #ccc;
+        }
+
+        /* Style the tab content */
+        .tabcontent {
+            display: none;
+            padding: 6px 12px;
+            border: 1px solid #ccc;
+            border-top: none;
+        }
+
+        /* ----END:STYLE FOR TABS----*/
+
+        /* ----START:STYLE FOR ACCORDION----*/
+        .accordion {
+            color: #444;
+            cursor: pointer;
+            padding: 18px;
+            width: 100%;
+            border: none;
+            text-align: left;
+            outline: none;
+            font-size: 15px;
+            transition: 0.4s;
+        }
+
+
+
+        .accordion:after {
+            content: '\002B';
+            color: #777;
+            font-weight: bold;
+            float: right;
+            margin-left: 5px;
+        }
+
+        .accordion.active:after {
+            content: "\2212";
+        }
+
+        .pane {
+            padding: 0 18px;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.2s ease-out;
+        }
+
+        button {
+            background-color: white;
+        }
+
+        /* ----END:STYLE FOR ACCORDION----*/
+    </style>
+</head>
+
+<body>
+    <h4>Schedule</h4>
+
+    <div class="tab">
+        <button class="tablinks" id="firsttab" onclick="openCity(event, 'Day 1')">Day 1</button>
+        <button class="tablinks" onclick="openCity(event, 'Day 2')">Day 2</button>
+        <button class="tablinks" onclick="openCity(event, 'Day 3')">Day 3</button>
+        <button class="tablinks" onclick="openCity(event, 'Day 4')">Day 4</button>
+
+    </div>
+
+    <div id="Day 1" class="tabcontent">
+        <h4>Day 1</h4>
+
+        <div class="row">
+            <div class="col-sm-1">
+                <p>13:30 - 15:00 &nbsp; &bull;</p>
+            </div>
+            <div class="col-sm-11">
+                <!-- accordion start -->
+                <div style="border:1px solid #ccc;">
+                    <button class="accordion">Day 1 : Parallel sessions</button>
+                    <div class="pane">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut
+                            labore
+                            et
+                            dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi
+                            ut
+                            aliquip
+                            ex ea commodo consequat.</p>
+                    </div>
+                </div>
+                <!-- accordion end -->
+            </div>
+        </div>
+
+    </div>
+
+    <div id="Day 2" class="tabcontent">
+        <h3>Day 2</h3>        
+    </div>
+
+    <div id="Day 3" class="tabcontent">
+        <h3>Day 3</h3>
+        <p>Day 3 is the capital of Japan.</p>
+    </div>
+
+    <div id="Day 4" class="tabcontent">
+        <h3>Day 4</h3>
+        <p>Day 4 is the capital of Japan.</p>
+    </div>
+
+
+
+    <script>
+        //for accordion
+        var acc = document.getElementsByClassName("accordion");
+        var accVar;
+
+        for (accVar = 0; accVar < acc.length; accVar++) {
+            acc[accVar].addEventListener("click", function () {
+                this.classList.toggle("active");
+                var pane = this.nextElementSibling;
+                if (pane.style.maxHeight) {
+                    pane.style.maxHeight = null;
+                } else {
+                    pane.style.maxHeight = pane.scrollHeight + "px";
+                }
+            });
+        }
+
+        //for tab selection
+        function openCity(evt, cityName) {
+            var i, tabcontent, tablinks;
+            tabcontent = document.getElementsByClassName("tabcontent");
+            for (i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].style.display = "none";
+            }
+            tablinks = document.getElementsByClassName("tablinks");
+            for (i = 0; i < tablinks.length; i++) {
+                tablinks[i].className = tablinks[i].className.replace(" active", "");
+            }
+            document.getElementById(cityName).style.display = "block";
+            evt.currentTarget.className += " active";
+        }
+
+        // for making the firsttab active   
+        window.onload = function WindowLoad(event) {
+            openCity(event, 'Day 1');
+            document.getElementById('firsttab').className += " active";
+        }
+    </script>
+
+</body>
+
+</html>
