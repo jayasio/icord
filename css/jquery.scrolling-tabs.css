@@ -1,0 +1,76 @@
+.nav-tabs>li>a {
+    margin-right: 2px;
+    /* line-height: 1.42857143; */
+    /* border: 1px solid #888888; */
+    border-radius: 4px 4px 0 0;
+    background-color: #f5f5f5;
+}
+.nav>li>a {
+    position: relative;
+    display: block;
+    padding: 5px 13px 5px 5px;
+}
+.scrtabs-tab-container * {
+  box-sizing: border-box;
+}
+
+/* line 17, jquery.scrolling-tabs.scss */
+.scrtabs-tab-container {
+  height: auto;
+}
+/* line 19, jquery.scrolling-tabs.scss */
+.scrtabs-tab-container .tab-content {
+  clear: left;
+}
+
+/* line 24, jquery.scrolling-tabs.scss */
+.scrtabs-tabs-fixed-container {
+  float: left;
+  height: auto;
+  overflow: hidden;
+  width: 100%;
+}
+
+/* line 31, jquery.scrolling-tabs.scss */
+.scrtabs-tabs-movable-container {
+  position: relative;
+}
+/* line 33, jquery.scrolling-tabs.scss */
+.scrtabs-tabs-movable-container .tab-content {
+  display: none;
+}
+
+/* line 38, jquery.scrolling-tabs.scss */
+.scrtabs-tab-scroll-arrow {
+ border: 1px solid #dddddd;
+    /* border-top: none; */
+    color: #ffffff;
+    cursor: pointer;
+    float: left;
+    font-size: 12px;
+    height: auto;
+    margin-bottom: -1px;
+    padding-left: 2px;
+    padding-top: 23px;
+    padding-bottom: 23px;
+    width: 20px;
+    background-color: #8c8c8c;
+}
+/* line 50, jquery.scrolling-tabs.scss */
+.scrtabs-tab-scroll-arrow:hover {
+  background-color:#980e71;
+}
+
+/* line 55, jquery.scrolling-tabs.scss */
+.scrtabs-tabs-fixed-container ul.nav-tabs {
+  height: auto;
+}
+/* line 57, jquery.scrolling-tabs.scss */
+.scrtabs-tabs-fixed-container ul.nav-tabs > li {
+  white-space: nowrap;
+}
+
+/* line 63, jquery.scrolling-tabs.scss */
+.scrtabs-tab-content-outside-movable-container .nav-tabs {
+  display: none;
+}

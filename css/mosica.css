@@ -1,0 +1,42 @@
+.wrapper{
+    display: grid;
+    width: 1300px;
+    grid-template-columns: repeat(70, 1fr);
+    position: relative;
+    top: 120;
+  }
+  .ind_mosaic{
+    width: 18.5px;
+    height: 18.5px;
+    background-repeat:no-repeat;
+    background-size:cover;
+    filter: blur(0px);
+  }
+  button{
+    padding: 1px;
+    text-align: center;
+    font-size: 1px;
+    border-radius: 0px;
+    border: 0px;
+    position: relative;
+    top: 15;
+    width: 15px;
+    /*box-shadow: 10px 10px 40px -1px rgba(215,227,227,1);*/
+  }
+  .title{
+  	position: absolute;
+  	left: 5%;
+  	top: 1%;
+  }
+  .title img{
+  	width: 300px;
+  }
+  .para{
+  	font-family: 'Montserrat', sans-serif;
+  	color: white;
+  	font-size: 12px;
+  	text-transform: uppercase;
+  	letter-spacing: 10px;
+  	line-height: 40px;
+  	width: 60%;
+  }
