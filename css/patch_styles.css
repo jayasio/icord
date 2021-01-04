@@ -1,4 +1,14 @@
 /* START:general */
+body {
+  font-family: "Mukta", sans-serif;
+  padding: 10px;
+}
+
+.scheduleset p {
+  font-size: 15px;
+  color: black;
+  font-weight: 300 !important;
+}
 
 .scheduleset a,
 .scheduleset a:visited {
@@ -16,25 +26,25 @@
   text-decoration: none;
 }
 
-.smallText {
+.scheduleset .smallText {
   font-size: 70% !important;
 }
 /* END:general  */
 
 /* ----START:TABLE STYLE----*/
-table,
-th,
-td {
+.scheduleset table,
+.scheduleset th,
+.scheduleset td {
   border: 1px solid #ccc;
   border-collapse: collapse;
 }
 
-th,
-td {
+.scheduleset th,
+.scheduleset td {
   padding: 5px;
 }
 
-th {
+.scheduleset th {
   text-align: left;
 }
 
@@ -42,13 +52,13 @@ th {
 
 /* ----START:STYLE FOR TABS----*/
 /* Style the tab */
-.tab {
+.scheduleset .tab {
   overflow: hidden;
   background-color: #f1f1f1;
 }
 
 /* Style the buttons inside the tab */
-.tab button {
+.scheduleset .tab button {
   background-color: inherit;
   float: left;
   border: 1px solid #ccc;
@@ -60,35 +70,36 @@ th {
 }
 
 /* Change background color of buttons on hover */
-.tab button:hover {
+.scheduleset .tab button:hover {
   background-color: #ddd;
 }
 
 /* Create an active/current tablink class */
-.tab button.active {
+.scheduleset .tab button.active {
   background-color: #005dd1;
   color: white;
 }
 
 /* Style the tab content */
-.tabcontent {
+.scheduleset .tabcontent {
   display: none;
   padding: 6px 12px;
   border: 1px solid #ccc;
   border-top: none;
 }
 
-.tabcontent2 {
+.scheduleset .tabcontent2 {
   display: none;
   padding: 6px 12px;
   border: 1px solid #ccc;
   border-top: none;
+  font-size: 15px;
 }
 
 /* ----END:STYLE FOR TABS----*/
 
 /* ----START:STYLE FOR ACCORDION----*/
-.accordion {
+.scheduleset .accordion {
   color: #444;
   cursor: pointer;
   padding: 6px;
@@ -100,11 +111,17 @@ th {
   transition: 0.4s;
 }
 
-.time-tab {
+.scheduleset .time-tab {
   border-left: 2px solid #ccc;
+  font-size: 15px;
 }
 
-.bullet-icon {
+.scheduleset .time {
+  color: #ccc;
+  font-size: 15px;
+}
+
+.scheduleset .bullet-icon {
   width: 10px;
   height: 10px;
   left: -6px;
@@ -114,18 +131,19 @@ th {
   position: absolute;
 }
 
-.accordion-wrapper {
+.scheduleset .accordion-wrapper {
   border: 1px solid #ccc;
   border-radius: 10px;
   padding: 4px;
 }
 
-.session-break-text {
+.scheduleset .session-break-text {
   font-weight: 500;
-  color: #ccc;
+  color: #ccc !important;
+  font-size: 15px;
 }
 
-.accordion:before {
+.scheduleset .accordion:before {
   content: "\002B";
   color: #777;
   font-weight: bold;
@@ -133,18 +151,19 @@ th {
   margin-left: 5px;
 }
 
-.accordion.active:before {
+.scheduleset .accordion.active:before {
   content: "\2212";
 }
 
-.pane {
+.scheduleset .pane {
   padding: 0 18px;
   max-height: 0;
   overflow: hidden;
   transition: max-height 0.2s ease-out;
+  font-size: 15px;
 }
 
-button {
+.scheduleset button {
   background-color: white;
 }
 
